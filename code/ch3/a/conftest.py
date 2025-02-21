@@ -4,7 +4,7 @@ import cards
 import pytest
 
 
-@pytest.fixture(scope="session")
+@pytest.fixture(scope="session")  # scope="function" にすると、全てのテストが成功する
 def cards_db():
     """CardsDB object connected to a temporary database"""
     with TemporaryDirectory() as db_dir:
